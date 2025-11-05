@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Versículo del día ✨</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      text-align: center;
+      padding: 40px;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      max-width: 400px;
+      margin: 100px auto;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .verse {
+      font-size: 1.2em;
+      font-weight: 500;
+      color: #444;
+      margin-bottom: 15px;
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 0.8em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div id="verse" class="verse">Cargando versículo...</div>
+    <div class="footer">✨ Inspirado por ti ✨</div>
+  </div>
+
+  <script>
+    async function loadVerse() {
+      try {
+        const response = await fetch("https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLhwlkgX5N8TdpcqXwbKzELwXMeT-NeccSCCfsipvf3kbtsgCWOTQyDjjRfbL-t1xTXFB3S2wsi2_broo_4voslWLx4NrQ-1B26fvjBa26kWp007tt1UrrXOLoYpfM0tjO18gNuq2IDKBxlM04edcwEJvC1d0XRXfO12HijOZDSUGpTAOLrMg5BNeERMzCz8FlA7IWgm41ZMpmSwkQpYBSKGmQyFVTHB33y5zs3uqDbltOyV5kCp3dc865zK4ORW3MlQFTBerhYPX5JsirWKQl_4acm0Zxe-A-PMOWK1&lib=MEwd4MNM1mgaZT9U4-GVYSNvTcetvNt65", { cache: "no-store" });
+        const text = await response.text();
+        document.getElementById("verse").innerHTML = text;
+      } catch (err) {
+        document.getElementById("verse").innerHTML = "Error al cargar el versículo 😢";
+      }
+    }
+    loadVerse();
+  </script>
+</body>
+</html>
