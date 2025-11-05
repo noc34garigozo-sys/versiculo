@@ -41,13 +41,13 @@
 <body>
   <div class="card">
     <div id="verse" class="verse">Cargando versículo...</div>
-    <div class="footer">✨ Inspirado por ti ✨</div>
+    <div class="footer">✨ PARA TI GRACIELA ✨</div>
   </div>
 
   <script>
     async function loadVerse() {
       try {
-        const response = await fetch("https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLhwlkgX5N8TdpcqXwbKzELwXMeT-NeccSCCfsipvf3kbtsgCWOTQyDjjRfbL-t1xTXFB3S2wsi2_broo_4voslWLx4NrQ-1B26fvjBa26kWp007tt1UrrXOLoYpfM0tjO18gNuq2IDKBxlM04edcwEJvC1d0XRXfO12HijOZDSUGpTAOLrMg5BNeERMzCz8FlA7IWgm41ZMpmSwkQpYBSKGmQyFVTHB33y5zs3uqDbltOyV5kCp3dc865zK4ORW3MlQFTBerhYPX5JsirWKQl_4acm0Zxe-A-PMOWK1&lib=MEwd4MNM1mgaZT9U4-GVYSNvTcetvNt65", { cache: "no-store" });
+        const response = await fetch("https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLhNRt3WxUcyhEVuqwXxPJmmpl1Tk5hpm00vm8l5Kj12_Bz5rB4Ss5ienncdlOM0a_yfPujf8LlTLM7XE17dG0IJaNWIu9KSUs-1m-LO0o5IqfjDzuKcOgBLVFl8MlWSAkWwhBbXBFTVM0lwgz6mbKCJvFeBiszLyn36HQWXBCTwhhdD3qyiDDNOZNNxB0P4LRl1Fetl12QLeD3i9xav_-kmqpdN5x0tUt03hRGrUGoyoDzZ6lluCxc6qqpCh3-oSOuhLM5rPEES8JKKBV73AnMni4VTz80_6djbWYsm&lib=MEwd4MNM1mgaZT9U4-GVYSNvTcetvNt65", { cache: "no-store" });
         const text = await response.text();
         document.getElementById("verse").innerHTML = text;
       } catch (err) {
@@ -58,3 +58,4 @@
   </script>
 </body>
 </html>
+
